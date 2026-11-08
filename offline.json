@@ -1,0 +1,363 @@
+{
+  "parser_errors": [
+    {
+      "input": "{\"category\": @}",
+      "error": "OutputParserException",
+      "cause": "JSONDecodeError"
+    },
+    {
+      "input": "{\"category\": \"fridge\"}",
+      "error": "OutputParserException",
+      "cause": "ValidationError"
+    },
+    {
+      "input": "{\"category\": \"tablet\", \"max_price\": -1}",
+      "error": "OutputParserException",
+      "cause": "ValidationError"
+    }
+  ],
+  "sqlite_fixtures": [
+    {
+      "query": "Найди ноутбуки дешевле 70 000 рублей",
+      "params": {
+        "category": "laptop",
+        "max_price": 69999,
+        "sort_by": "price_asc"
+      },
+      "products": [
+        {
+          "id": 1,
+          "name": "Acer Aspire",
+          "category": "laptop",
+          "price": 45000
+        },
+        {
+          "id": 2,
+          "name": "Lenovo IdeaPad",
+          "category": "laptop",
+          "price": 59000
+        },
+        {
+          "id": 3,
+          "name": "ASUS VivoBook",
+          "category": "laptop",
+          "price": 65000
+        }
+      ]
+    },
+    {
+      "query": "Покажи самые дорогие смартфоны",
+      "params": {
+        "category": "smartphone",
+        "max_price": null,
+        "sort_by": "price_desc"
+      },
+      "products": [
+        {
+          "id": 10,
+          "name": "Galaxy S24 Ultra",
+          "category": "smartphone",
+          "price": 115000
+        },
+        {
+          "id": 9,
+          "name": "iPhone 15",
+          "category": "smartphone",
+          "price": 75000
+        },
+        {
+          "id": 8,
+          "name": "Pixel 8a",
+          "category": "smartphone",
+          "price": 48000
+        },
+        {
+          "id": 7,
+          "name": "Galaxy A35",
+          "category": "smartphone",
+          "price": 29000
+        },
+        {
+          "id": 6,
+          "name": "Redmi Note",
+          "category": "smartphone",
+          "price": 18000
+        }
+      ]
+    },
+    {
+      "query": "Хочу посмотреть планшеты",
+      "params": {
+        "category": "tablet",
+        "max_price": null,
+        "sort_by": "price_asc"
+      },
+      "products": [
+        {
+          "id": 11,
+          "name": "Lenovo Tab",
+          "category": "tablet",
+          "price": 15000
+        },
+        {
+          "id": 12,
+          "name": "Redmi Pad",
+          "category": "tablet",
+          "price": 21000
+        },
+        {
+          "id": 13,
+          "name": "Galaxy Tab A9",
+          "category": "tablet",
+          "price": 27000
+        },
+        {
+          "id": 14,
+          "name": "iPad Air",
+          "category": "tablet",
+          "price": 68000
+        },
+        {
+          "id": 15,
+          "name": "Galaxy Tab S9",
+          "category": "tablet",
+          "price": 82000
+        }
+      ]
+    },
+    {
+      "query": "Покажи ноутбуки до 50 тысяч",
+      "params": {
+        "category": "laptop",
+        "max_price": 50000,
+        "sort_by": "price_asc"
+      },
+      "products": [
+        {
+          "id": 1,
+          "name": "Acer Aspire",
+          "category": "laptop",
+          "price": 45000
+        }
+      ]
+    },
+    {
+      "query": "Найди холодильники",
+      "params": {
+        "category": "other",
+        "max_price": null,
+        "sort_by": "price_asc"
+      },
+      "products": []
+    },
+    {
+      "query": "Хочу недорогой планшет",
+      "params": {
+        "category": "tablet",
+        "max_price": null,
+        "sort_by": "price_asc"
+      },
+      "products": [
+        {
+          "id": 11,
+          "name": "Lenovo Tab",
+          "category": "tablet",
+          "price": 15000
+        },
+        {
+          "id": 12,
+          "name": "Redmi Pad",
+          "category": "tablet",
+          "price": 21000
+        },
+        {
+          "id": 13,
+          "name": "Galaxy Tab A9",
+          "category": "tablet",
+          "price": 27000
+        },
+        {
+          "id": 14,
+          "name": "iPad Air",
+          "category": "tablet",
+          "price": 68000
+        },
+        {
+          "id": 15,
+          "name": "Galaxy Tab S9",
+          "category": "tablet",
+          "price": 82000
+        }
+      ]
+    },
+    {
+      "query": "Смартфон или планшет около 30 тысяч",
+      "params": {
+        "category": "smartphone",
+        "max_price": 30000,
+        "sort_by": "price_asc"
+      },
+      "products": [
+        {
+          "id": 6,
+          "name": "Redmi Note",
+          "category": "smartphone",
+          "price": 18000
+        },
+        {
+          "id": 7,
+          "name": "Galaxy A35",
+          "category": "smartphone",
+          "price": 29000
+        }
+      ]
+    },
+    {
+      "query": "Ноутбуки до 10 тысяч",
+      "params": {
+        "category": "laptop",
+        "max_price": 10000,
+        "sort_by": "price_asc"
+      },
+      "products": []
+    },
+    {
+      "query": "Сначала дорогие планшеты до 30 тысяч",
+      "params": {
+        "category": "tablet",
+        "max_price": 30000,
+        "sort_by": "price_desc"
+      },
+      "products": [
+        {
+          "id": 13,
+          "name": "Galaxy Tab A9",
+          "category": "tablet",
+          "price": 27000
+        },
+        {
+          "id": 12,
+          "name": "Redmi Pad",
+          "category": "tablet",
+          "price": 21000
+        },
+        {
+          "id": 11,
+          "name": "Lenovo Tab",
+          "category": "tablet",
+          "price": 15000
+        }
+      ]
+    },
+    {
+      "query": "Смартфоны до 18 тысяч",
+      "params": {
+        "category": "smartphone",
+        "max_price": 18000,
+        "sort_by": "price_asc"
+      },
+      "products": [
+        {
+          "id": 6,
+          "name": "Redmi Note",
+          "category": "smartphone",
+          "price": 18000
+        }
+      ]
+    }
+  ],
+  "retry": [
+    {
+      "retry": false,
+      "calls": [
+        "llm"
+      ],
+      "answer": {
+        "message": "Не удалось разобрать запрос. Попыток: 1."
+      }
+    },
+    {
+      "retry": true,
+      "calls": [
+        "llm",
+        "llm",
+        "search"
+      ],
+      "answer": {
+        "params": {
+          "category": "laptop",
+          "max_price": 69999,
+          "sort_by": "price_asc"
+        },
+        "products": [
+          {
+            "id": 1,
+            "name": "Acer Aspire",
+            "category": "laptop",
+            "price": 45000
+          },
+          {
+            "id": 2,
+            "name": "Lenovo IdeaPad",
+            "category": "laptop",
+            "price": 59000
+          },
+          {
+            "id": 3,
+            "name": "ASUS VivoBook",
+            "category": "laptop",
+            "price": 65000
+          }
+        ],
+        "message": "Найдены товары."
+      }
+    },
+    {
+      "retry": true,
+      "calls": [
+        "llm",
+        "llm",
+        "llm"
+      ],
+      "answer": {
+        "message": "Не удалось разобрать запрос. Попыток: 3."
+      }
+    }
+  ],
+  "tool_cases": [
+    {
+      "message": "Модель не вызвала инструмент поиска."
+    },
+    {
+      "params": {
+        "category": "laptop",
+        "max_price": 69999,
+        "sort_by": "price_asc"
+      },
+      "products": [
+        {
+          "id": 1,
+          "name": "Acer Aspire",
+          "category": "laptop",
+          "price": 45000
+        },
+        {
+          "id": 2,
+          "name": "Lenovo IdeaPad",
+          "category": "laptop",
+          "price": 59000
+        },
+        {
+          "id": 3,
+          "name": "ASUS VivoBook",
+          "category": "laptop",
+          "price": 65000
+        }
+      ],
+      "message": "Найдены товары."
+    },
+    {
+      "message": "Не удалось разобрать запрос. Попыток: 1."
+    }
+  ]
+}

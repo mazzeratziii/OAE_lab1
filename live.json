@@ -1,0 +1,945 @@
+{
+  "basic": {
+    "llm_type": "AIMessage",
+    "chain_type": "TextAccessor",
+    "chain_text": "Ноутбуки",
+    "batch": [
+      "Ноутбуки",
+      "Смартфоны",
+      "Планшеты"
+    ]
+  },
+  "structured": [
+    {
+      "query": "Найди ноутбуки дешевле 70 000 рублей",
+      "json": "{\"category\":\"laptop\",\"max_price\":69999,\"sort_by\":\"price_asc\"}",
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    },
+    {
+      "query": "Покажи самые дорогие смартфоны",
+      "json": "{\"category\":\"smartphone\",\"max_price\":null,\"sort_by\":\"price_desc\"}",
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    },
+    {
+      "query": "Хочу посмотреть планшеты",
+      "json": "{\"category\":\"tablet\",\"max_price\":null,\"sort_by\":\"price_asc\"}",
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    },
+    {
+      "query": "Покажи ноутбуки до 50 тысяч",
+      "json": "{\"category\":\"laptop\",\"max_price\":50000,\"sort_by\":\"price_asc\"}",
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    },
+    {
+      "query": "Найди холодильники",
+      "json": "{\"category\":\"other\",\"max_price\":null,\"sort_by\":\"price_asc\"}",
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    },
+    {
+      "query": "Хочу недорогой планшет",
+      "json": "{\"category\":\"tablet\",\"max_price\":null,\"sort_by\":\"price_asc\"}",
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    },
+    {
+      "query": "Смартфон или планшет около 30 тысяч",
+      "json": "{\"category\":\"smartphone\",\"max_price\":30000,\"sort_by\":\"price_asc\"}",
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    }
+  ],
+  "search": [
+    {
+      "query": "Найди ноутбуки дешевле 70 000 рублей",
+      "params": {
+        "category": "laptop",
+        "max_price": 69999,
+        "sort_by": "price_asc"
+      },
+      "products": [
+        {
+          "id": 1,
+          "name": "Acer Aspire",
+          "category": "laptop",
+          "price": 45000
+        },
+        {
+          "id": 2,
+          "name": "Lenovo IdeaPad",
+          "category": "laptop",
+          "price": 59000
+        },
+        {
+          "id": 3,
+          "name": "ASUS VivoBook",
+          "category": "laptop",
+          "price": 65000
+        }
+      ],
+      "message": "Найдены товары.",
+      "correct": true,
+      "without_catalog": "К сожалению, я не имею доступа к вашему личному каталогу, базе данных магазина или текущим ценам в конкретных интернет-магазинах (таких как Ozon, Wildberries, DNS, M.Video и т.д.), так как я — искусственный интеллект, работающий с общедоступной информацией, а не с внутренними системами ритейла.\n\nОднако я могу помочь вам **выбрать подходящий ноутбук до 70 000 рублей**, если вы уточните:\n\n1. **Для каких задач** нужен ноутбук?  \n   - Работа с офисными документами  \n   - Учёба  \n   - Игры (какие именно? лёгкие или требовательные?)  \n   - Видеомонтаж / графика  \n   - Просто для интернета и мультимедиа  \n\n2. **Предпочтения по характеристикам**:  \n   - Размер экрана (14\", 15.6\", 17\")  \n   - Оперативная память (минимум 8 ГБ, лучше 16 ГБ)  \n   - Накопитель (SSD, объём)  \n   - Процессор (Intel Core i5/i7, AMD Ryzen 5/7)  \n   - Наличие дискретной видеокарты (для игр/графики)  \n   - Вес и портативность  \n\n3. **Бюджет**: строго до 70 000 ₽ или можно чуть выше?\n\n---\n\n### Примеры популярных ноутбуков в бюджете до 70 000 ₽ (ориентировочно, по данным на 2024–2025 гг.):\n\n| Модель | Процессор | ОЗУ | Накопитель | Видеокарта | Особенности |\n|--------|-----------|-----|------------|------------|-------------|\n| **Lenovo IdeaPad 5** | Intel Core i5-1240P / AMD Ryzen 5 7530U | 16 ГБ | 512 ГБ SSD | Интегрированная | Хороший экран, лёгкий, для работы и учёбы |\n| **ASUS VivoBook 15** | Intel Core i5-1235U / AMD Ryzen 5 7530U | 16 ГБ | 512 ГБ SSD | Интегрированная | Компактный, хороший звук, для повседневных задач |\n| **Acer Aspire 5** | Intel Core i5-12450H / AMD Ryzen 5 7535HS | 16 ГБ | 512 ГБ SSD | Интегрированная / RTX 3050 (в некоторых версиях) | Бюджетный вариант с возможностью апгрейда |\n| **HP Pavilion 15** | Intel Core i5-1235U / AMD Ryzen 5 7530U | 16 ГБ | 512 ГБ SSD | Интегрированная | Надёжный, тихий, для офиса и дома |\n| **MSI Thin 15** | Intel Core i5-12450H | 16 ГБ | 512 ГБ SSD | Интегрированная / RTX 3050 (в некоторых версиях) | Для лёгких игр и мультимедиа |\n\n> ⚠️ Цены могут меняться в зависимости от акций, региона и магазина. Рекомендую проверить актуальные предложения на сайтах:\n> - [Ozon](https://www.ozon.ru)\n> - [Wildberries](https://www.wildberries.ru)\n> - [DNS](https://www.dns-shop.ru)\n> - [M.Video](https://www.mvideo.ru)\n> - [Citilink](https://www.citilink.ru)\n\nЕсли вы уточните свои требования, я помогу подобрать конкретную модель и подскажу, на что обратить внимание при покупке."
+    },
+    {
+      "query": "Покажи самые дорогие смартфоны",
+      "params": {
+        "category": "smartphone",
+        "max_price": null,
+        "sort_by": "price_desc"
+      },
+      "products": [
+        {
+          "id": 10,
+          "name": "Galaxy S24 Ultra",
+          "category": "smartphone",
+          "price": 115000
+        },
+        {
+          "id": 9,
+          "name": "iPhone 15",
+          "category": "smartphone",
+          "price": 75000
+        },
+        {
+          "id": 8,
+          "name": "Pixel 8a",
+          "category": "smartphone",
+          "price": 48000
+        },
+        {
+          "id": 7,
+          "name": "Galaxy A35",
+          "category": "smartphone",
+          "price": 29000
+        },
+        {
+          "id": 6,
+          "name": "Redmi Note",
+          "category": "smartphone",
+          "price": 18000
+        }
+      ],
+      "message": "Найдены товары.",
+      "correct": true,
+      "without_catalog": "Я не имею доступа к конкретному интернет-магазину или каталогу товаров, поэтому не могу показать вам список товаров из вашего каталога.\n\nОднако я могу рассказать о **самых дорогих смартфонах на мировом рынке** (по состоянию на 2024–2025 год). Вот несколько примеров топовых и люксовых моделей:\n\n### 🏆 Самые дорогие смартфоны (по цене)\n\n1. **iPhone 15 Pro Max / iPhone 16 Pro Max**  \n   - Цена: от $1,199 (базовая версия) до $1,599+ (максимальная конфигурация).  \n   - Особенности: титановый корпус, мощная камера, чип A17 Pro / A18 Pro.\n\n2. **Samsung Galaxy S24 Ultra**  \n   - Цена: от $1,299.  \n   - Особенности: S Pen, камера 200 Мп, чип Snapdragon 8 Gen 3.\n\n3. **Huawei Mate 60 Pro / Pura 70 Ultra**  \n   - Цена: от $1,000–$1,500 (в зависимости от рынка и конфигурации).  \n   - Особенности: премиальные материалы, мощная камера, поддержка спутниковой связи.\n\n4. **Luxury-версии (ограниченные серии)**  \n   - **Vertu Signature S** — от $30,000–$50,000+.  \n   - **8848 Titanium** — от $10,000–$20,000+.  \n   - **iPhone 15 Pro Max с золотом/алмазами (кастомные версии)** — могут стоить сотни тысяч долларов.\n\n5. **Xiaomi 14 Ultra / Xiaomi 14 Pro Titanium**  \n   - Цена: от $1,000–$1,300.  \n   - Особенности: камера Leica, титановая рамка.\n\n---\n\n### ❓ Если вы имели в виду конкретный магазин:\nПожалуйста, уточните:\n- Название магазина или сайта.\n- Или пришлите список товаров из каталога, и я помогу отсортировать их по цене.\n\nХотите, чтобы я сравнил характеристики каких-то конкретных моделей?"
+    },
+    {
+      "query": "Хочу посмотреть планшеты",
+      "params": {
+        "category": "tablet",
+        "max_price": null,
+        "sort_by": "price_asc"
+      },
+      "products": [
+        {
+          "id": 11,
+          "name": "Lenovo Tab",
+          "category": "tablet",
+          "price": 15000
+        },
+        {
+          "id": 12,
+          "name": "Redmi Pad",
+          "category": "tablet",
+          "price": 21000
+        },
+        {
+          "id": 13,
+          "name": "Galaxy Tab A9",
+          "category": "tablet",
+          "price": 27000
+        },
+        {
+          "id": 14,
+          "name": "iPad Air",
+          "category": "tablet",
+          "price": 68000
+        },
+        {
+          "id": 15,
+          "name": "Galaxy Tab S9",
+          "category": "tablet",
+          "price": 82000
+        }
+      ],
+      "message": "Найдены товары.",
+      "correct": true,
+      "without_catalog": "Я не имею доступа к вашему личному каталогу товаров, так как я — искусственный интеллект и не подключен к конкретным магазинам или базам данных.\n\nОднако я могу помочь вам выбрать планшет, если вы уточните:\n\n1. **Бюджет** — сколько вы готовы потратить?\n2. **Назначение** — для работы, учебы, игр, чтения или просмотра видео?\n3. **Предпочтения по ОС** — Android, iPadOS (Apple) или Windows?\n4. **Важные характеристики** — размер экрана, наличие стилуса, автономность, производительность?\n\nНапример, популярные категории планшетов сейчас:\n- **Apple iPad** (Air, Pro, mini) — экосистема Apple, отличные экраны.\n- **Samsung Galaxy Tab** (S9, S10, A-серия) — мощные Android-планшеты с S Pen.\n- **Microsoft Surface** — гибриды с Windows, подходят для работы.\n- **Бюджетные Android-планшеты** (Xiaomi, Lenovo, Huawei) — для базовых задач.\n\nЕсли хотите, я могу сравнить конкретные модели или подобрать варианты под ваши критерии!"
+    },
+    {
+      "query": "Покажи ноутбуки до 50 тысяч",
+      "params": {
+        "category": "laptop",
+        "max_price": 50000,
+        "sort_by": "price_asc"
+      },
+      "products": [
+        {
+          "id": 1,
+          "name": "Acer Aspire",
+          "category": "laptop",
+          "price": 45000
+        }
+      ],
+      "message": "Найдены товары.",
+      "correct": true
+    },
+    {
+      "query": "Найди холодильники",
+      "params": {
+        "category": "other",
+        "max_price": null,
+        "sort_by": "price_asc"
+      },
+      "products": [],
+      "message": "Категория не поддерживается.",
+      "correct": true
+    },
+    {
+      "query": "Хочу недорогой планшет",
+      "params": {
+        "category": "tablet",
+        "max_price": null,
+        "sort_by": "price_asc"
+      },
+      "products": [
+        {
+          "id": 11,
+          "name": "Lenovo Tab",
+          "category": "tablet",
+          "price": 15000
+        },
+        {
+          "id": 12,
+          "name": "Redmi Pad",
+          "category": "tablet",
+          "price": 21000
+        },
+        {
+          "id": 13,
+          "name": "Galaxy Tab A9",
+          "category": "tablet",
+          "price": 27000
+        },
+        {
+          "id": 14,
+          "name": "iPad Air",
+          "category": "tablet",
+          "price": 68000
+        },
+        {
+          "id": 15,
+          "name": "Galaxy Tab S9",
+          "category": "tablet",
+          "price": 82000
+        }
+      ],
+      "message": "Найдены товары.",
+      "correct": true
+    },
+    {
+      "query": "Смартфон или планшет около 30 тысяч",
+      "params": {
+        "category": "smartphone",
+        "max_price": 30000,
+        "sort_by": "price_asc"
+      },
+      "products": [
+        {
+          "id": 6,
+          "name": "Redmi Note",
+          "category": "smartphone",
+          "price": 18000
+        },
+        {
+          "id": 7,
+          "name": "Galaxy A35",
+          "category": "smartphone",
+          "price": 29000
+        }
+      ],
+      "message": "Найдены товары.",
+      "correct": true
+    },
+    {
+      "query": "Ноутбуки до 10 тысяч",
+      "params": {
+        "category": "laptop",
+        "max_price": 10000,
+        "sort_by": "price_asc"
+      },
+      "products": [],
+      "message": "Подходящие товары не найдены.",
+      "correct": true
+    },
+    {
+      "query": "Сначала дорогие планшеты до 30 тысяч",
+      "params": {
+        "category": "tablet",
+        "max_price": 30000,
+        "sort_by": "price_desc"
+      },
+      "products": [
+        {
+          "id": 13,
+          "name": "Galaxy Tab A9",
+          "category": "tablet",
+          "price": 27000
+        },
+        {
+          "id": 12,
+          "name": "Redmi Pad",
+          "category": "tablet",
+          "price": 21000
+        },
+        {
+          "id": 11,
+          "name": "Lenovo Tab",
+          "category": "tablet",
+          "price": 15000
+        }
+      ],
+      "message": "Найдены товары.",
+      "correct": true
+    },
+    {
+      "query": "Смартфоны до 18 тысяч",
+      "params": {
+        "category": "smartphone",
+        "max_price": 18000,
+        "sort_by": "price_asc"
+      },
+      "products": [
+        {
+          "id": 6,
+          "name": "Redmi Note",
+          "category": "smartphone",
+          "price": 18000
+        }
+      ],
+      "message": "Найдены товары.",
+      "correct": true
+    }
+  ],
+  "thinking": [
+    {
+      "query": "Хочу недорогой планшет",
+      "enabled": false,
+      "seconds": 0.353,
+      "output_tokens": 30,
+      "content": "{\n  \"category\": \"tablet\",\n  \"max_price\": null,\n  \"sort_by\": \"price_asc\"\n}",
+      "output_token_details": {},
+      "reasoning_fields": [],
+      "params": {
+        "category": "tablet",
+        "max_price": null,
+        "sort_by": "price_asc"
+      },
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    },
+    {
+      "query": "Смартфон или планшет около 30 тысяч",
+      "enabled": false,
+      "seconds": 0.392,
+      "output_tokens": 36,
+      "content": "{\n  \"category\": \"smartphone\",\n  \"max_price\": 30000,\n  \"sort_by\": \"price_asc\"\n}",
+      "output_token_details": {},
+      "reasoning_fields": [],
+      "params": {
+        "category": "smartphone",
+        "max_price": 30000,
+        "sort_by": "price_asc"
+      },
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    },
+    {
+      "query": "Хочу недорогой планшет",
+      "enabled": true,
+      "seconds": 2.642,
+      "output_tokens": 354,
+      "content": "\n\n{\n  \"category\": \"tablet\",\n  \"max_price\": null,\n  \"sort_by\": \"price_asc\"\n}",
+      "output_token_details": {},
+      "reasoning_fields": [],
+      "params": {
+        "category": "tablet",
+        "max_price": null,
+        "sort_by": "price_asc"
+      },
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    },
+    {
+      "query": "Смартфон или планшет около 30 тысяч",
+      "enabled": true,
+      "seconds": 4.216,
+      "output_tokens": 547,
+      "content": "\n\n{\n  \"category\": \"smartphone\",\n  \"max_price\": 30000,\n  \"sort_by\": \"price_asc\"\n}",
+      "output_token_details": {},
+      "reasoning_fields": [],
+      "params": {
+        "category": "smartphone",
+        "max_price": 30000,
+        "sort_by": "price_asc"
+      },
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    }
+  ],
+  "tools": [
+    {
+      "query": "Найди ноутбуки дешевле 70 000 рублей",
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "category": "laptop",
+            "max_price": 69999,
+            "sort_by": "price_asc"
+          },
+          "id": "chatcmpl-tool-a9e3988a686b31f7",
+          "type": "tool_call"
+        }
+      ],
+      "params": {
+        "category": "laptop",
+        "max_price": 69999,
+        "sort_by": "price_asc"
+      },
+      "products": [
+        {
+          "id": 1,
+          "name": "Acer Aspire",
+          "category": "laptop",
+          "price": 45000
+        },
+        {
+          "id": 2,
+          "name": "Lenovo IdeaPad",
+          "category": "laptop",
+          "price": 59000
+        },
+        {
+          "id": 3,
+          "name": "ASUS VivoBook",
+          "category": "laptop",
+          "price": 65000
+        }
+      ],
+      "message": "Найдены товары.",
+      "correct": true
+    },
+    {
+      "query": "Покажи самые дорогие смартфоны",
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "category": "smartphone",
+            "sort_by": "price_desc"
+          },
+          "id": "chatcmpl-tool-95addb1ae163065a",
+          "type": "tool_call"
+        }
+      ],
+      "params": {
+        "category": "smartphone",
+        "max_price": null,
+        "sort_by": "price_desc"
+      },
+      "products": [
+        {
+          "id": 10,
+          "name": "Galaxy S24 Ultra",
+          "category": "smartphone",
+          "price": 115000
+        },
+        {
+          "id": 9,
+          "name": "iPhone 15",
+          "category": "smartphone",
+          "price": 75000
+        },
+        {
+          "id": 8,
+          "name": "Pixel 8a",
+          "category": "smartphone",
+          "price": 48000
+        },
+        {
+          "id": 7,
+          "name": "Galaxy A35",
+          "category": "smartphone",
+          "price": 29000
+        },
+        {
+          "id": 6,
+          "name": "Redmi Note",
+          "category": "smartphone",
+          "price": 18000
+        }
+      ],
+      "message": "Найдены товары.",
+      "correct": true
+    },
+    {
+      "query": "Хочу посмотреть планшеты",
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "category": "tablet",
+            "sort_by": "price_asc"
+          },
+          "id": "chatcmpl-tool-81b08e63c07ac431",
+          "type": "tool_call"
+        }
+      ],
+      "params": {
+        "category": "tablet",
+        "max_price": null,
+        "sort_by": "price_asc"
+      },
+      "products": [
+        {
+          "id": 11,
+          "name": "Lenovo Tab",
+          "category": "tablet",
+          "price": 15000
+        },
+        {
+          "id": 12,
+          "name": "Redmi Pad",
+          "category": "tablet",
+          "price": 21000
+        },
+        {
+          "id": 13,
+          "name": "Galaxy Tab A9",
+          "category": "tablet",
+          "price": 27000
+        },
+        {
+          "id": 14,
+          "name": "iPad Air",
+          "category": "tablet",
+          "price": 68000
+        },
+        {
+          "id": 15,
+          "name": "Galaxy Tab S9",
+          "category": "tablet",
+          "price": 82000
+        }
+      ],
+      "message": "Найдены товары.",
+      "correct": true
+    },
+    {
+      "query": "Покажи ноутбуки до 50 тысяч",
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "category": "laptop",
+            "max_price": 50000,
+            "sort_by": "price_asc"
+          },
+          "id": "chatcmpl-tool-ae5420e1ee663ed5",
+          "type": "tool_call"
+        }
+      ],
+      "params": {
+        "category": "laptop",
+        "max_price": 50000,
+        "sort_by": "price_asc"
+      },
+      "products": [
+        {
+          "id": 1,
+          "name": "Acer Aspire",
+          "category": "laptop",
+          "price": 45000
+        }
+      ],
+      "message": "Найдены товары.",
+      "correct": true
+    },
+    {
+      "query": "Найди холодильники",
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "category": "other",
+            "sort_by": "price_asc",
+            "max_price": null
+          },
+          "id": "chatcmpl-tool-b0c6eaa46e1341c0",
+          "type": "tool_call"
+        }
+      ],
+      "params": {
+        "category": "other",
+        "max_price": null,
+        "sort_by": "price_asc"
+      },
+      "products": [],
+      "message": "Категория не поддерживается.",
+      "correct": true
+    },
+    {
+      "query": "Хочу недорогой планшет",
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "category": "tablet",
+            "max_price": null,
+            "sort_by": "price_asc"
+          },
+          "id": "chatcmpl-tool-a9c08ee83e8352b2",
+          "type": "tool_call"
+        }
+      ],
+      "params": {
+        "category": "tablet",
+        "max_price": null,
+        "sort_by": "price_asc"
+      },
+      "products": [
+        {
+          "id": 11,
+          "name": "Lenovo Tab",
+          "category": "tablet",
+          "price": 15000
+        },
+        {
+          "id": 12,
+          "name": "Redmi Pad",
+          "category": "tablet",
+          "price": 21000
+        },
+        {
+          "id": 13,
+          "name": "Galaxy Tab A9",
+          "category": "tablet",
+          "price": 27000
+        },
+        {
+          "id": 14,
+          "name": "iPad Air",
+          "category": "tablet",
+          "price": 68000
+        },
+        {
+          "id": 15,
+          "name": "Galaxy Tab S9",
+          "category": "tablet",
+          "price": 82000
+        }
+      ],
+      "message": "Найдены товары.",
+      "correct": true
+    },
+    {
+      "query": "Смартфон или планшет около 30 тысяч",
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "search_products",
+          "args": {
+            "category": "smartphone",
+            "max_price": 30000,
+            "sort_by": "price_asc"
+          },
+          "id": "chatcmpl-tool-b07ab21a4850303c",
+          "type": "tool_call"
+        }
+      ],
+      "params": {
+        "category": "smartphone",
+        "max_price": 30000,
+        "sort_by": "price_asc"
+      },
+      "products": [
+        {
+          "id": 6,
+          "name": "Redmi Note",
+          "category": "smartphone",
+          "price": 18000
+        },
+        {
+          "id": 7,
+          "name": "Galaxy A35",
+          "category": "smartphone",
+          "price": 29000
+        }
+      ],
+      "message": "Найдены товары.",
+      "correct": true
+    }
+  ],
+  "dialogues": [
+    {
+      "dialogue": 1,
+      "mode": "state",
+      "query": "Покажи ноутбуки до 80 тысяч",
+      "input_tokens": 518,
+      "params": {
+        "category": "laptop",
+        "max_price": 80000,
+        "sort_by": "price_asc"
+      },
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    },
+    {
+      "dialogue": 1,
+      "mode": "state",
+      "query": "А сначала дорогие?",
+      "input_tokens": 534,
+      "params": {
+        "category": "laptop",
+        "max_price": 80000,
+        "sort_by": "price_desc"
+      },
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    },
+    {
+      "dialogue": 1,
+      "mode": "state",
+      "query": "А что есть среди смартфонов?",
+      "input_tokens": 537,
+      "params": {
+        "category": "smartphone",
+        "max_price": 80000,
+        "sort_by": "price_desc"
+      },
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    },
+    {
+      "dialogue": 1,
+      "mode": "history",
+      "query": "Покажи ноутбуки до 80 тысяч",
+      "input_tokens": 520,
+      "params": {
+        "category": "laptop",
+        "max_price": 80000,
+        "sort_by": "price_asc"
+      },
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    },
+    {
+      "dialogue": 1,
+      "mode": "history",
+      "query": "А сначала дорогие?",
+      "input_tokens": 525,
+      "params": {
+        "category": "laptop",
+        "max_price": 80000,
+        "sort_by": "price_desc"
+      },
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    },
+    {
+      "dialogue": 1,
+      "mode": "history",
+      "query": "А что есть среди смартфонов?",
+      "input_tokens": 534,
+      "params": {
+        "category": "smartphone",
+        "max_price": 80000,
+        "sort_by": "price_desc"
+      },
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    },
+    {
+      "dialogue": 2,
+      "mode": "state",
+      "query": "Планшеты до 25 тысяч",
+      "input_tokens": 517,
+      "params": {
+        "category": "tablet",
+        "max_price": 25000,
+        "sort_by": "price_asc"
+      },
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    },
+    {
+      "dialogue": 2,
+      "mode": "state",
+      "query": "Теперь до 70 тысяч",
+      "input_tokens": 537,
+      "params": {
+        "category": "tablet",
+        "max_price": 70000,
+        "sort_by": "price_asc"
+      },
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    },
+    {
+      "dialogue": 2,
+      "mode": "state",
+      "query": "А без ограничения цены?",
+      "input_tokens": 534,
+      "params": {
+        "category": "tablet",
+        "max_price": null,
+        "sort_by": "price_asc"
+      },
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    },
+    {
+      "dialogue": 2,
+      "mode": "history",
+      "query": "Планшеты до 25 тысяч",
+      "input_tokens": 519,
+      "params": {
+        "category": "tablet",
+        "max_price": 25000,
+        "sort_by": "price_asc"
+      },
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    },
+    {
+      "dialogue": 2,
+      "mode": "history",
+      "query": "Теперь до 70 тысяч",
+      "input_tokens": 528,
+      "params": {
+        "category": "tablet",
+        "max_price": 70000,
+        "sort_by": "price_asc"
+      },
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    },
+    {
+      "dialogue": 2,
+      "mode": "history",
+      "query": "А без ограничения цены?",
+      "input_tokens": 535,
+      "params": {
+        "category": "tablet",
+        "max_price": null,
+        "sort_by": "price_asc"
+      },
+      "field_checks": {
+        "category": true,
+        "max_price": true,
+        "sort_by": true
+      },
+      "correct": true
+    }
+  ]
+}
